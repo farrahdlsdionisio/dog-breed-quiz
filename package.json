@@ -1,0 +1,22 @@
+{
+  "name": "dog-breed-quiz",
+  "version": "1.0.0",
+  "description": "a quiz website using react.js ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farrahdlsdionisio/dog-breed-quiz.git"
+  },
+  "keywords": [
+    "[\"react.js\"]"
+  ],
+  "author": "Farrah Dionisio farrahdlsdionisio@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/farrahdlsdionisio/dog-breed-quiz/issues"
+  },
+  "homepage": "https://github.com/farrahdlsdionisio/dog-breed-quiz#readme"
+}
