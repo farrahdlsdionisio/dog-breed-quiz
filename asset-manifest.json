@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/dog-breed-quiz/static/css/main.ff9b3349.css",
+    "main.js": "/dog-breed-quiz/static/js/main.891f9298.js",
+    "static/js/453.1a80acfa.chunk.js": "/dog-breed-quiz/static/js/453.1a80acfa.chunk.js",
+    "static/media/paw-start.svg": "/dog-breed-quiz/static/media/paw-start.9337354d0103cd199dac7e591d613433.svg",
+    "index.html": "/dog-breed-quiz/index.html",
+    "static/media/night-mode.svg": "/dog-breed-quiz/static/media/night-mode.dba54919bb188bbe25c483311dc55539.svg",
+    "static/media/sound-on.svg": "/dog-breed-quiz/static/media/sound-on.7794b5fdb9d8375beb6e4e60d07ce090.svg",
+    "main.ff9b3349.css.map": "/dog-breed-quiz/static/css/main.ff9b3349.css.map",
+    "main.891f9298.js.map": "/dog-breed-quiz/static/js/main.891f9298.js.map",
+    "453.1a80acfa.chunk.js.map": "/dog-breed-quiz/static/js/453.1a80acfa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff9b3349.css",
+    "static/js/main.891f9298.js"
+  ]
+}
