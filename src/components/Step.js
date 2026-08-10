@@ -1,24 +1,6 @@
-import { useState } from "react";
-import questions from "../questions.js";
-import goldenRetriever from "../assets/icons/golden-retriever.png";
-
-export default function Quiz() {
-  const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
-  const [userAnswers, setUserAnswers] = useState([]);
-  const [hoveredOption, setHoveredOption] = useState(null);
-
-  const currentQuestion = questions[activeQuestionIndex];
-
-  const handleAnswer = (breed) => {
-    setUserAnswers([...userAnswers, breed]);
-  };
-
+export default function Step({ step, totalSteps }) {
   return (
-    <>
-      <div className="question-container">
-        <h1>{currentQuestion.question}</h1>
-      </div>
-      <div className="paw-wrap">
+    <div className="paw-wrap">
         <svg
           className="paw-svg"
           width="361"
@@ -41,9 +23,6 @@ export default function Quiz() {
             fill="#FED8B1"
             stroke="white"
             strokeWidth="10"
-            onMouseEnter={() => setHoveredOption("lhasaApso")}
-            onMouseLeave={() => setHoveredOption(null)}
-            onClick={() => handleAnswer("lhasaApso")}
           />
           <path
             className="pad-1"
@@ -51,9 +30,6 @@ export default function Quiz() {
             fill="#FED8B1"
             stroke="white"
             strokeWidth="10"
-            onMouseEnter={() => setHoveredOption("germanShepherd")}
-            onMouseLeave={() => setHoveredOption(null)}
-            onClick={() => handleAnswer("germanShepherd")}
           />
           <path d="M226.475 6.55509C226.41 6.57917 226.345 6.60325 226.279 6.62653C226.258 6.63482 226.237 6.64373 226.214 6.65324C226.424 6.58038 226.495 6.55084 226.475 6.55509Z" fill="#383838" />
           <path
@@ -62,9 +38,6 @@ export default function Quiz() {
             fill="#FED8B1"
             stroke="white"
             strokeWidth="10"
-            onMouseEnter={() => setHoveredOption("cockerSpaniel")}
-            onMouseLeave={() => setHoveredOption(null)}
-            onClick={() => handleAnswer("cockerSpaniel")}
           />
           <path d="M219.534 118.682C219.537 118.683 219.539 118.683 219.542 118.684C219.599 118.684 219.816 118.744 219.912 118.77C219.968 118.765 219.601 118.641 219.534 118.682Z" fill="#383838" />
           <path
@@ -73,42 +46,9 @@ export default function Quiz() {
             fill="#FED8B1"
             stroke="white"
             strokeWidth="10"
-            onMouseEnter={() => setHoveredOption("dachshund")}
-            onMouseLeave={() => setHoveredOption(null)}
-            onClick={() => handleAnswer("dachshund")}
           />
           <path d="M324.877 95.1165C324.286 95.0726 324.599 95.0764 324.877 95.1165V95.1165Z" fill="#383838" />
-
-          <image
-            href={goldenRetriever}
-            x="37" y="139" width="24" height="24"
-            style={{ pointerEvents: "none", opacity: hoveredOption === "germanShepherd" ? 1 : 0 }}
-          />
-          <image
-            href={goldenRetriever}
-            x="111.5" y="49.5" width="24" height="24"
-            style={{ pointerEvents: "none", opacity: hoveredOption === "lhasaApso" ? 1 : 0 }}
-          />
-          <image
-            href={goldenRetriever}
-            x="222" y="49.5" width="24" height="24"
-            style={{ pointerEvents: "none", opacity: hoveredOption === "cockerSpaniel" ? 1 : 0 }}
-          />
-          <image
-            href={goldenRetriever}
-            x="299.5" y="145" width="24" height="24"
-            style={{ pointerEvents: "none", opacity: hoveredOption === "dachshund" ? 1 : 0 }}
-          />
         </svg>
-
-        {hoveredOption && (
-          <div className="pad-overlay">
-            <p className="option-text">
-              {currentQuestion.options.find(opt => opt.breed === hoveredOption)?.text}
-            </p>
-          </div>
-        )}
-      </div>
-    </>
+    </div>
   );
 }

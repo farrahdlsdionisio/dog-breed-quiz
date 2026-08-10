@@ -12,3 +12,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Container holding the SVG and hotspots */
+.paw-wrap {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+}
+
+/* The SVG itself */
+.paw-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pad-1:hover {
+  fill: rgb(140, 222, 255);
+  cursor: pointer;
+}
+
+.pad-2:hover {
+  fill: rgb(255, 194, 250);
+  cursor: pointer;
+}
+
+.pad-3:hover {
+  fill: rgb(181, 255, 210);
+  cursor: pointer;
+}
+
+.pad-4:hover {
+  fill: rgb(187, 177, 255);
+  cursor: pointer;
+}
+
+.dog-image-1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.dog-image-2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

@@ -1,32 +1,21 @@
 import { ReactComponent as Start } from "../assets/paw-start.svg";
-import { useState, useRef } from "react";
+import { ReactComponent as Step } from "./Step";
+import Quiz from "./Quiz";
 
-export default function Main() {
-  const username = useRef(null);
-  const [enteredUsername, setUsername] = useState(null);
+export default function Main({quizStarted, setQuizStarted}) {
 
   const handleStart = () => {
-    console.log("start");
-  };
-
-  const handleClick = (e) => {
-    setUsername(username.current.value);
+    setQuizStarted(true);
   };
 
   return (
     <>
-      <h1>WHAT DOG BREED ARE YOU? {enteredUsername ?? ""} </h1>
-      <div>
-        <p>
-          Take this quiz to find out which dog breed you are based on your
-          personality
-        </p>
-        <input type="text" ref={username} />
-        <button onClick={handleClick}>Set Name</button>
-      </div>
-      <img src="../assets/cocker-spaniel.png" alt="cocker-spaniel" />
-      <Start onClick={() => handleStart()} />
-      <img src="../assets/poodle.png" alt="poodle" />
+        {!quizStarted && 
+          <div className="paw-wrap">
+            <Start onClick={() => handleStart()} />
+            <span className="start-label">Click to Start</span>
+          </div>
+        }
     </>
   );
 }
